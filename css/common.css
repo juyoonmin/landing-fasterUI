@@ -1,0 +1,22 @@
+@charset "UTF-8";
+@import "../font/akira/stylesheet.css";
+
+/* 기본 설정들 */
+html {overflow-x: hidden;}
+body{position: relative;overflow: hidden; }
+html *{ word-break: keep-all;}
+html, body {font-family: var(--font1), Arial, sans-serif;}  
+img, p, span, h1, h2, h3, h4, h5, h6 {-webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none; -webkit-user-drag: none; }
+
+/* 기본 세팅 */
+.wrap{ width: 100%; margin: 0 auto; }
+.wrap[max="1920"]{ max-width: 1920px;}
+.wrap[max="1720"]{ max-width: 1720px; }
+
+:root{
+  /* font */
+  --font1:'Akira';
+  --font2:'Montserrat';
+  /* color */
+  --color-Main:#ff0000;
+}
