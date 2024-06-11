@@ -48,9 +48,11 @@
   padding: 20px 0;
   font-size: 14px;
 }
-.logo img{
+
+.logo img {
   height: 40px;
 }
+
 .header .wrap {
   display: flex;
   justify-content: space-between;
@@ -58,10 +60,6 @@
   gap: 10px;
 }
 
-.menu{
-  margin-right: auto;
-  margin-left: calc(50% - 500px);
-}
 .menu ul {
   display: flex;
   justify-content: space-between;
@@ -70,18 +68,29 @@
 }
 
 .menu ul li {
+  transition: 0.5s;
   position: relative;
 }
 
 .shop {
+  display: flex;
+  width: 155px;
+  justify-content: flex-end;
+}
+
+.shop span {
   border: white solid 1px;
   padding: 10px;
+  transition: 0.5s;
 }
 
 .menu ul li:hover,
-.shop:hover {
+.shop span:hover {
   color: var(--color-Main);
-  transition: 0.5s;
+}
+
+.shop span:hover {
+  border: var(--color-Main) solid 1px;
 }
 
 .menu ul li::after {
@@ -111,12 +120,14 @@
   display: flex;
   justify-content: center;
 }
-.main-content{
+
+.main-content {
   display: flex;
   justify-content: center;
   color: #fff;
 }
-.textbox{
+
+.textbox {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,46 +136,173 @@
   gap: 20px;
   width: 100%;
 }
-.textbox h2{
+
+.textbox h2 {
   font-size: 90px;
   line-height: 1;
 }
-.textbox span{
+
+.textbox span {
   display: inline-block;
 }
-.main-button button{
-  background-color: #ffffff; 
-  color: #222222; 
-  font-size: 16px; 
+
+.main-button button {
+  background-color: #ffffff;
+  color: #222222;
+  font-size: 16px;
   font-family: var(--font1);
-  padding: 15px 25px; 
-  border: none; 
-  cursor: pointer; 
-  text-align: center; 
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
 }
+
 .main-button button:hover {
-  background-color: #cc0000 !important; 
+  background-color: #cc0000 !important;
+  transition: 0.5s;
 }
+
 .main-button button:focus {
-  outline: none; 
-  box-shadow: 0 0 0 2px #FFFFFF; 
+  outline: none;
+  box-shadow: 0 0 0 2px #FFFFFF;
 }
-.text-right, .text-left {
+
+.text-right,
+.text-left {
   opacity: 0;
   transform: translateX(0);
 }
+
 .text-right {
-  transform: translateX(-100px); 
+  transform: translateX(-100px);
 }
+
 .text-left {
-  transform: translateX(100px); 
-}
-.main-title p, .main-button button {
-  opacity: 0; 
+  transform: translateX(100px);
 }
 
+.main-title p,
+.main-button button {
+  opacity: 0;
+}
 
 
+
+/* se1 */
+.section1 {
+  margin-top: 150px;
+}
+
+.swiper-container {
+  overflow: hidden;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.swiper-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.swiper-top h2 {
+  font-size: 50px;
+}
+
+.swiper-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+#news .swiper-container .swiper-button-next,
+#news .swiper-container .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-Main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  margin-top: 0;
+  right: 0;
+  left: 0;
+}
+
+#news .swiper-container .swiper-button-next::after,
+#news .swiper-container .swiper-button-prev::after {
+  color: #fff;
+  font-size: 16px;
+}
+
+.swiper-container .swiper-slide {
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+}
+
+.swiper-container .imgbox,
+.imgbox img {
+  width: 100%;
+}
+
+.swiper-textbox {
+  padding: 0 30px 25px 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.swiper-slide h3 {
+  font-size: 24px;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.swiper-slide p {
+  font-family: var(--font2);
+  font-size: 16px;
+  line-height: 1.5;
+  padding-bottom: 25px;
+  color: #ffffff9c;
+}
+
+.swiper-slide button {
+  background-color: var(--color-Main);
+  color: #fff;
+  font-family: var(--font1);
+  font-size: 15px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.swiper-slide button::after {
+  content: "";
+  background-image: url(../img/icon/right\ arrow.svg);
+  width: 9px;
+  height: 13px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.swiper-slide .button100 {
+  width: 100%;
+}
 
 
 .section1 {

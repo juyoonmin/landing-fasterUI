@@ -3,7 +3,7 @@ function runAnimations() {
   // 메인 컨텐츠 애니메이션
   const timeline = gsap.timeline();
   timeline.to(".main-title p", { opacity: 1, duration: 1 });
-  timeline.to(".text-right", { opacity: 1, x: 0, duration: 1, ease: "power2.out" },"-=0.5");
+  timeline.to(".text-right", { opacity: 1, x: 0, duration: 1, ease: "power2.out" }, "-=0.5");
   timeline.to(".text-red", { color: "#FF0000", duration: 1.5 }, "-=0.5");
   timeline.to(".text-left", { opacity: 1, x: 0, duration: 1, ease: "power2.out" }, "-=1");
   timeline.to(".main-button button", { opacity: 1, duration: 1 },)
@@ -63,6 +63,15 @@ function handleLoadingScreen() {
     }
   });
 }
+var swiper = new Swiper('.swiper-container', {
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
 
 document.addEventListener('DOMContentLoaded', function () {
   handleLoadingScreen();
