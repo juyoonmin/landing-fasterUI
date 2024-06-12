@@ -43,7 +43,7 @@
   width: 100%;
   top: 0;
   z-index: 100;
-  background-color: #222222;
+  background-color: #222222cc;
   color: #fff;
   padding: 20px 0;
   font-size: 14px;
@@ -162,11 +162,6 @@
   transition: 0.5s;
 }
 
-.main-button button:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px #FFFFFF;
-}
-
 .text-right,
 .text-left {
   opacity: 0;
@@ -190,7 +185,7 @@
 
 /* se1 */
 .section1 {
-  margin-top: 150px;
+  margin: 150px 0;
 }
 
 .swiper-container {
@@ -261,7 +256,8 @@
   gap: 25px;
   justify-content: space-between;
 }
-.swiper-text{
+
+.swiper-text {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -307,7 +303,116 @@
   width: 100%;
 }
 
+.swiper-button button:hover {
+  background-color: #cc0000 !important;
+  transition: 0.5s;
+}
 
-.section1 {
+/* se2 */
+
+.se2-content {
+  display: flex;
+  justify-content: center;
+}
+
+.se2-con1 {
+  display: flex;
+  flex-direction: column;
+  flex: 4;
+}
+
+.se2-con1-textbox {
+  height: 50%;
+}
+
+.se2-con1-text {
+  background-color: #000;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.se2-con1-text p {
+  max-width: 270px;
+  color: #fff;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.se2-con1-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 50%;
+  background-color: var(--color-Main);
+}
+
+.se2-con1-img-text {
+  text-align: center;
+  color: #fff;
+  font-size: 35px;
+}
+
+
+.se2-con3 {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+}
+
+.se2-con3-textbox {
+  height: 35%;
+}
+
+.se2-con3-text {
+  background-color: var(--color-Main);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+}
+
+.se2-con3-text h2 {
+  position: relative;
+  font-size: 220px;
+  line-height: 0.8;
+}
+
+.se2-con3-text .plus {
+  position: absolute;
+  font-size: 60px;
+  transform: translate(20px, 60px);
+}
+
+.se2-con3-text p {
+  font-size: 35px;
+}
+
+.se2-con3-textbox2 {
+  height: 65%;
+}
+
+.se2-con3-text2 {
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.se2-con3-text2 p {
+  color: #fff;
+  font-size: 55px;
+  max-width: 389px;
+}
+
+/* se3 */
+.section3{
   height: 150vh;
 }

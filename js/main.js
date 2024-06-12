@@ -63,20 +63,76 @@ function handleLoadingScreen() {
     }
   });
 }
+
 // 스와이퍼
 function initSwiper() {
   new Swiper('.swiper-container', {
     loop: true,
-    slidesPerView: 3,
-    spaceBetween: 30,
+    slidesPerView: 1,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+      650: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+    },
   });
+}
+
+// se2 애니메이션
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
+
+function initSection2Animation() {
+  const timeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.section2',
+      start: 'center center',
+      end: '700%',
+      scrub: 1,
+      ease: 'none',
+      pin: true,
+      // markers: true
+    }
+  });
+
+  timeline
+    .set(".se2-con1-textbox", { opacity: 0, y: -50 })
+    .set(".se2-con1-img", { opacity: 0, y: 50 })
+    .set(".se2-con2-img", { opacity: 0, x: 50 })
+    .set(".se2-con3-textbox", { opacity: 0, y: -50 })
+    .set(".se2-con3-textbox2", { opacity: 0, y: 50 })
+    
+    .to(".se2-con1-textbox", { opacity: 1, duration: 1, y: 0 })
+    .to(".se2-con1-img", { opacity: 1, duration: 1, y: 0 })
+    .to(".se2-con2-img", { opacity: 1, duration: 1, x: 0 })
+    .to(".se2-con3-textbox", { opacity: 1, duration: 1, y: 0 })
+    .to(".se2-con3-textbox2", { opacity: 1, duration: 1, y: 0 })
+    .to(".se2-con3-text2 p", { 
+      text: {
+        value: "our mission is to <span class='se2-red'>win</span>, and only <span class='se2-red'>win</span>. that's what we do.",
+      }, 
+      duration: 3, 
+      ease: "none",
+      onUpdate: function() {
+        const progress = this.progress(); // progress() 메서드 참조
+        if (progress > 0.8) { // 진행 상태에 따라 색상 변경
+          document.querySelectorAll(".se2-red").forEach(el => {
+            el.style.color = "#FF0000";
+          });
+        }
+      }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', function () {
   handleLoadingScreen();
   initSwiper();
+  initSection2Animation();
 });
