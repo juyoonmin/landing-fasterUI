@@ -118,7 +118,7 @@ function initSection2Animation() {
       text: {
         value: "our mission is to <span class='se2-red'>win</span>, and only <span class='se2-red'>win</span>. that's what we do.",
       }, 
-      duration: 3, 
+      duration: 5, 
       ease: "none",
       onUpdate: function() {
         const progress = this.progress(); // progress() 메서드 참조
@@ -127,12 +127,25 @@ function initSection2Animation() {
             el.style.color = "#FF0000";
           });
         }
+        //gsap버전
+        // if (progress > 0.8) {
+        //   gsap.to(".se2-red", { color: "#FF0000", duration: 1 });
+        // }
       }
     });
+}
+
+// 햄버거 메뉴
+function initHamburgerMenu() {
+  document.getElementById('hamburger').addEventListener('click', function () {
+      this.classList.toggle('menu_active');
+      document.getElementById('submenubox').classList.toggle('menu_active');
+  });
 }
 
 document.addEventListener('DOMContentLoaded', function () {
   handleLoadingScreen();
   initSwiper();
   initSection2Animation();
+  initHamburgerMenu();
 });
