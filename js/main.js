@@ -94,8 +94,8 @@ function initSection2Animation() {
     scrollTrigger: {
       trigger: '.section2',
       start: 'center center',
-      end: '700%',
-      scrub: 1,
+      end: '500%',
+      scrub: 2,
       ease: 'none',
       pin: true,
       // markers: true
@@ -142,6 +142,8 @@ function initHamburgerMenu() {
       document.getElementById('submenubox').classList.toggle('menu_active');
   });
 }
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
   handleLoadingScreen();
