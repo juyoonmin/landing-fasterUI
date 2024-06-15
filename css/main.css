@@ -896,8 +896,146 @@
   color: var(--color-Main);
 }
 
+.se3-sub {
+  display: flex;
+  flex-direction: column;
+  margin: 75px 0;
+  gap: 35px;
+}
+
+.se3-sub-maintext h2 {
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.se3-sub-content {
+  display: flex;
+  flex-direction: column;
+  width: 97%;
+  margin: 0 auto;
+}
+
+.se3-sub-content span {
+  color: #ffffff;
+  font-family: var(--font2);
+  font-size: 16px;
+}
+
+.match {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 23px;
+  align-items: center;
+  border-bottom: #2D2D2D solid 1px;
+  padding-bottom: 12px;
+}
+
+.match:nth-child(1) {
+  opacity: 0.4;
+}
+
+.match:nth-child(3) {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.match-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  min-width: 250px
+}
+
+.se3-sub-content .result {
+  font-size: 24px;
+  font-family: var(--font1);
+  min-width: 37px;
+  display: flex;
+  justify-content: center;
+}
+
+.tournament {
+  display: flex;
+  align-items: center;
+}
+
+.match-score {
+  display: flex;
+  align-items: center;
+  width: 35%;
+  justify-content: space-between;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  min-width: 42px;
+
+}
+
+.fastericon,
+.airplaneicon,
+.handicon,
+.cookieicon,
+.fastericon2 {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+}
+
+.airplaneicon,
+.cookieicon,
+.fastericon2 {
+  min-width: 155px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fastericon::before,
+.airplaneicon::after,
+.handicon::before,
+.cookieicon::after,
+.fastericon2::after {
+  content: '';
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+.fastericon::before {
+  background-image: url('../img/icon/fasterui.svg');
+}
+
+.fastericon2::after {
+  background-image: url('../img/icon/fasterui.svg');
+}
+
+
+.airplaneicon::after {
+  background-image: url('../img/icon/airplane.svg');
+}
+
+.handicon::before {
+  background-image: url('../img/icon/hand.svg');
+}
+
+.cookieicon::after {
+  background-image: url('../img/icon/cookie.svg');
+}
+
+
+
+
 @media screen and (max-width:1024px) {
   .section3 {
     margin: 400px 0 150px 0;
   }
+}
+
+/* se4 */
+.section4 {
+  height: 150vh;
 }
