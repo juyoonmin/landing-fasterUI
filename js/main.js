@@ -194,6 +194,45 @@ function initSection3Animation() {
     })
 }
 
+// se4 애니메이션
+function initSection4Animation() {
+  const timeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.section4',
+      start: 'center center',
+      end: '120%',
+      ease: 'none',
+      pin: true,
+      // markers: true
+    }
+  });
+
+  timeline
+    .set(".se4-imgbox", { opacity: 0, x: -50 })
+    .set(".se4-icon img", { opacity: 0, x: 50, scale: 0.5, rotate: 0})
+    .set(".se4-maintext", { opacity: 0, x: 50 })
+    .set(".se4-button", { opacity: 0, x: 50 })
+
+    .to(".se4-imgbox", { opacity: 1, duration: 0.7, x: 0 })
+    .to(".se4-icon img", { opacity: 1, duration: 2, x: 0, rotateY: 720, 
+      ease: "elastic.out(1, 0.5)",  scale: 1,
+      onComplete: function() {
+        gsap.set(".se4-icon img", { clearProps: "transform" });
+      } })
+    .to(".se4-maintext", { opacity: 1, duration: 0.7, x: 0 },"-=1.5")
+    .to(".se4-button", { opacity: 1, duration: 0.7, x: 0 },"-=1")
+    .to(".se4-red", {
+      color: "red",
+      repeat: -1,
+      yoyo: true,
+      duration: 0.7,
+      ease: "power1.inOut",
+      onComplete: function() {
+        gsap.to(".se4-red", { color: "", repeat: 0 }); // Reset the color to default
+      }
+    },"-=0.5");
+}
+
 
 document.addEventListener('DOMContentLoaded', function () {
   handleLoadingScreen();
@@ -201,4 +240,5 @@ document.addEventListener('DOMContentLoaded', function () {
   initSection2Animation();
   initHamburgerMenu();
   initSection3Animation();
+  initSection4Animation();
 });
