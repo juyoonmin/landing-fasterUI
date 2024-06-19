@@ -228,7 +228,7 @@ function initSection4Animation() {
       duration: 0.7,
       ease: "power1.inOut",
       onComplete: function() {
-        gsap.to(".se4-red", { color: "", repeat: 0 }); // Reset the color to default
+        gsap.to(".se4-red", { color: "", repeat: 0 }); 
       }
     },"-=0.5");
 }
