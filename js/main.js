@@ -233,6 +233,45 @@ function initSection4Animation() {
     },"-=0.5");
 }
 
+// se5 애니메이션
+function initSection5Animation() {
+  const timeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.section5',
+      start: 'center center',
+      end: '200%',
+      scrub: 1,
+      ease: 'none',
+      pin: true,
+      // markers: true
+    }
+  });
+
+  timeline
+    .set(".se5-content", { opacity: 0, x: -50 })
+    .set(".se5-imgbox", { opacity: 0, x: 50 })
+    .set(".se5-title h2", { opacity: 0, x: -50 })
+    .set(".se5-icons .icon-box", { opacity: 0, y: 50 })
+    .to(".se5-content", { opacity: 1, duration: 0.7, x: 0 })
+    .to(".se5-imgbox", { opacity: 1, duration: 0.7, x: 0 })
+    .to(".se5-title h2", { 
+      opacity: 1, 
+      duration: 2, 
+      x: 0, 
+      text: {value:'JOIN <br> FASTERUI <br> FAMILY'}, 
+      ease: "none",
+    })
+    .to(".se5-icons .icon-box", { 
+      opacity: 1, 
+      y: 0, 
+      duration: 0.6, 
+      stagger: 0.2, 
+      ease: "power1.out",
+      onComplete: function() {
+        gsap.set(".se5-icons .icon-box", { clearProps: "transform" });
+      } 
+    });   
+}
 
 document.addEventListener('DOMContentLoaded', function () {
   handleLoadingScreen();
@@ -241,4 +280,5 @@ document.addEventListener('DOMContentLoaded', function () {
   initHamburgerMenu();
   initSection3Animation();
   initSection4Animation();
+  initSection5Animation();
 });
