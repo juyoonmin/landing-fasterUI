@@ -78,7 +78,8 @@
   gap: 40px;
 }
 
-.menu ul li,.footer-menu ul li {
+.menu ul li,
+.footer-menu ul li {
   transition: 0.5s;
   position: relative;
 }
@@ -96,7 +97,8 @@
 }
 
 .menu ul li:hover,
-.shop span:hover,.footer-menu ul li a:hover {
+.shop span:hover,
+.footer-menu ul li a:hover {
   color: var(--color-Main);
 }
 
@@ -104,7 +106,8 @@
   border: var(--color-Main) solid 1px;
 }
 
-.menu ul li::after, .footer-menu ul li::after {
+.menu ul li::after,
+.footer-menu ul li::after {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -117,7 +120,8 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.menu ul li:hover::after, .footer-menu ul li:hover::after {
+.menu ul li:hover::after,
+.footer-menu ul li:hover::after {
   transform: scaleX(1);
 }
 
@@ -637,6 +641,7 @@
   .se2-con3 {
     flex: 1;
     flex-direction: unset;
+    min-height: 270px;
   }
 
   .se2-con3-textbox {
@@ -649,7 +654,7 @@
 
   .se2-con3-textbox,
   .se2-con3-textbox2 {
-    height: 200%;
+    height: 150%;
   }
 
   .se2-con3-text2 p {
@@ -735,18 +740,9 @@
     width: 75%;
   }
 
-  .se2-con3-textbox,
-  .se2-con3-textbox2 {
-    height: 150%;
-  }
 }
 
 @media screen and (max-width:591px) {
-
-  .se2-con3-textbox,
-  .se2-con3-textbox2 {
-    height: 150%;
-  }
 
   .se2-con3-textbox {
     width: 80%;
@@ -820,6 +816,11 @@
 
   .se2-content {
     justify-content: center;
+  }
+
+  .se2-con3-textbox,
+  .se2-con3-textbox2 {
+    height: 100%;
   }
 }
 
@@ -1548,7 +1549,7 @@ footer {
   gap: 50px;
 }
 
-.footer-logobox img{
+.footer-logobox img {
   max-width: 240px;
 }
 
@@ -1571,52 +1572,62 @@ footer {
   margin: 0 auto;
 }
 
-.footer-menu ul{
+.footer-menu ul {
   display: flex;
   align-items: center;
   gap: 40px;
 }
-.footer-menu ul li a{
+
+.footer-menu ul li a {
   color: white;
 }
 
-@media screen and (max-width:768px){
-  .footer-imgbox{
+@media screen and (max-width:768px) {
+  .footer-imgbox {
     gap: 35px;
   }
-  .footer-menu ul li a{
+
+  .footer-menu ul li a {
     font-size: 14px;
   }
-  .footer-menu ul{
+
+  .footer-menu ul {
     gap: 25px;
   }
-  .footer-iconbox{
+
+  .footer-iconbox {
     gap: 20px;
     max-width: 173px;
   }
+
   .footer-logobox img {
     max-width: 173px;
+  }
 }
-}
-@media screen and (max-width:635px){
-  .footer-menu ul li a{
+
+@media screen and (max-width:635px) {
+  .footer-menu ul li a {
     font-size: 12px;
   }
-  .footer-menu ul{
+
+  .footer-menu ul {
     gap: 20px;
   }
 }
-@media screen and (max-width:550px){
-  .footer-menu{
+
+@media screen and (max-width:550px) {
+  .footer-menu {
     display: none;
   }
 }
-@media screen and (max-width:500px){
-  .footer-iconbox{
+
+@media screen and (max-width:500px) {
+  .footer-iconbox {
     gap: 15px;
     max-width: 145px;
   }
+
   .footer-logobox img {
     max-width: 145px;
-}
+  }
 }
